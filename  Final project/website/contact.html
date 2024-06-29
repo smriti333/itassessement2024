@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gallery</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+       
+        .contact {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .contact .table{
+            padding:20px;
+        }
+        footer {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+   
+</head>
+<script>
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(email);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('subscribe');
+        const email = emailInput.value;
+        
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+
+        alert('Subscription successful!');
+        
+        return true;
+    }
+
+    window.onload = function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', handleSubmit);
+    }
+</script>
+<body>
+     <!--header-->
+     <header>
+        <a href="#" class="logo">GlowFlorist</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="Services.html">Services</a>
+        </nav>
+        <label for="toggler" class="fas fa-bars"></label>
+    </header>
+    <!--end of header-->
+    <!--contact us-->
+    <div id="contact" class="contact">
+        <form>
+            <label for="subscribe">Subscribe To Our Newsletter</label><br>
+            <input type="text" class="subs" id="subscribe" placeholder="Enter your email">
+            <button type="submit" class="submit-btn">Submit</button>
+            <table>
+                <tr>
+                    <th>Information</th>
+                    <th>Our services</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr>
+                    <td><a href="about.html">About Us</a></td>
+                    <td><a href="gallery.html">Decoration</a></td>
+                    <td><a href="mailto:contact@glowflorist.com">contact@glowflorist.com</a></td>
+                </tr>
+                <tr>
+                    <td><a href="index.html">Event</td>
+                    <td><a href="gallery.html">Order</td>
+                    <td><a href="tel:+91 9834569267">91 9834569260</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+  
+
+
+
+
+    <footer>
+       <p>&copy; 2024 GlowFlorist. All rights reserved.</p><br>
+       <p>123 Flower Street, Kathmandu, Nepal</p>
+    </footer>
+
+    
+    
+</body>
+</html>

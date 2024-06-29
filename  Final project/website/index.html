@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flora Website</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
+</head>
+<script>
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(email);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('subscribe');
+        const email = emailInput.value;
+        
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+
+        alert('Subscription successful!');
+        
+        return true;
+    }
+
+    window.onload = function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', handleSubmit);
+    }
+</script>
+<body>
+
+    <!--header-->
+    <header>
+        <a href="#" class="logo">GlowFlorist</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="Services.html">Services</a>
+        </nav>
+        <label for="toggler" class="fas fa-bars"></label>
+    </header>
+    <!--end of header-->
+
+    <div class="slider">
+        <div class="slide">
+            <img src="flower10 1.png" alt="slide1">
+        </div>
+        <div class="slide">
+            <img src="flower9 2.png" alt="slide2">
+        </div>
+        <div class="slide">
+            <img src="imageh 1.png" alt="slide3">
+        </div>
+
+        <button class="prev">Previous</button>
+        <button class="next">Next</button>
+    </div>
+
+    <!--home-->
+    <section id="home" class="home">
+        <div class="content">
+            <h2>ABOUT US</h2><br>
+            <hr>
+            <p>GlowFlorist</p>
+        </div>
+    </section><br><br>
+    <!--home ends-->
+
+    <!--about-->
+    <section id="about" class="about">
+        <div class="box">
+            <p>Welcome to GlowFlorist,<br> where beauty blooms! We are a passionate team<br> of florists 
+                dedicated to bringing you the freshest and most vibrant<br> flowers
+                for every occasion. At GlowFlorist, we believe that flowers have <br>
+                the power to brighten any moment, and we are committed to providing<br> 
+                you with exquisite floral arrangements that leave a lasting impression.<br>
+                Whether you're celebrating a special event or simply want to add a<br>
+                touch of nature to your space, GlowFlorist is here to make your <br>floral dreams come true.</p>
+            <img src="about.webp">
+            <hr>  
+        </div>
+    </section>
+    <!--about ends-->
+
+    <!--gallery-->
+    <div id="gallery" class="container">
+        
+        <div class="product">
+            <h1>Our Best Flowers</h1>
+            <br>
+            <hr>
+            <br><br>
+            <div class="product">
+                <div class="product-item">
+                    <img src="flower5 1.png" alt="Image 1">
+                    <button>Buy Now</button>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="flower6 1.png" alt="Image 2">
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="flower3 1.png" alt="Image 3">
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="flower7 1.png" alt="Image 4">
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="flower 8 1.png" alt="Image 5">
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="flower9 1.png" alt="Image 6">
+                    <button>Buy Now</button>
+                </div>
+                <br>
+            </div><br>
+            <br>
+        <h2>OUR SERVICES</h2>
+            <hr>
+        
+        </div><br><br><br>
+    </div>
+    <!--gallery ends-->
+
+    <!--our work-->
+    
+    <div id="Services" class="service">
+
+        
+        <div class="service">
+        <img src="event5.jpg" alt="group1" style="width:420px">
+        </div>
+        <div class="service">
+        <img src="event4.jpg" alt="group2" style="width:410px">
+        </div>
+        <div class="service">
+        <img src="event6.jpg" alt="group3" style="width:420px;">
+        </div>
+    </div>
+    
+    <!--end of work-->
+
+    <!--contact us-->
+    <div id="contact" class="contact">
+        <form>
+            <label for="subscribe">Subscribe To Our Newsletter</label><br>
+            <input type="text" class="subs" id="subscribe" placeholder="Enter your email">
+            <button type="submit" class="submit-btn">Submit</button>
+            <table>
+                <tr>
+                    <th>Information</th>
+                    <th>Our services</th>
+                    <th>Contact Us</th>
+                </tr>
+                <tr>
+                    <td>About US</td>
+                    <td>Decoration</td>
+                    <td><a href="mailto:contact@glowflorist.com">contact@glowflorist.com</a></td>
+                </tr>
+                <tr>
+                    <td>Event</td>
+                    <td>Order</td>
+                    <td>+9176549780</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!--end of contact us-->
+    <footer>
+        <p>&copy; 2024 GlowFlorist. All rights reserved.</p><br>
+        <p>123 Flower Street, Kathmandu, Nepal</p>
+    </footer>
+
+    
+    
+</body>
+</html>
